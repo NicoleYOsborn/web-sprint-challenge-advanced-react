@@ -2,13 +2,16 @@
 import {useState} from 'react';
 
 export const useForm = initialValue => {
+   
     // const [showSuccessMessage, setShowSuccessMessage] = useState(false);
     const [values, setValues] = useState(initialValue);
-    
-    const handleChanges = (e) => {
+   
+    const handleChanges = e => {
+        console.log('event handler handling')
         setValues({ ...values, [e.target.name]: e.target.value });
+        console.log("event handled")
       };
-      
-    return [values, setValues, handleChanges];
+
+    return [values, handleChanges];
   };
   
