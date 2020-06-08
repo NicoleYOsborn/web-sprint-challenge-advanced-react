@@ -30,13 +30,29 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+First you declare your class component as an extention of React.compnent. Next you set up a constructor function and call super(), and use the constructor to set up the state. Then we render the UI to the Dom using the render() method.  
+
 2. Describe the different phases of the component lifecycle.
+
+The Mounting phase is using Constructor to set up state and Render to update the DOM. The Updating phase gets the state from props and checks if it should be updated, then rerenders the components to the DOM. The Unmounting phase removes the component from the screen.
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+constructor - initializes state by assigning it to this.state, and sets up event handler methods
+render - examines props and state and returns elements, arrays and fragents, portals, strings and numbers. Booleans or null are not returned.
+componentDidMount - invoked immediately after component is mounted. Loading data from a remote endpoint goes here.
+componentDidUpdate - only invoked after updating occurs. Allows changes to the DOM when updates occur.
+componentWillUnmount - invoked before a component is unmounted and destroyed (good place to perform "cleanup" of timers, network requests or subsciptions created in componentDidMount)
+
 4. Define stateful logic.
 
+Stateful logic is any code that sets, declares, or updates the state in a react component.
+
 5. Describe how to test a React component with React Testing Library.
+
+arrange - set up code so that it can be tested
+act - call a method that returns a result to the test
+assert - test that the result matches what should be expected
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
